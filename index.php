@@ -14,3 +14,9 @@ require_once 'conf.php';
 // loome test objekti template klassist
 
 $testTabel = new template('test');
+
+// lisame objekti testvaade
+
+echo '<pre>';
+print_r($testTabel);
+echo '</pre>';
