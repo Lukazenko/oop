@@ -99,4 +99,10 @@ class template
 
     }
 
+    // malli elemendi nimi ja reaalväärtuse paari koostamine ja lisamine $this->vars massiivi sisse
+
+    function set($name, $value){
+        $this->vars[$name] = $value;
+    }
+
 }
