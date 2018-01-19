@@ -15,6 +15,33 @@ class template
     var $vars = array(); // HTML malli elementide ja reaalväärtuste paarid
 
 
+
+
+
+    /**
+     * template constructor.
+     * @param string $file
+     */
+    public function __construct($file)
+    {
+        $this->file = $file;  // määrame kasutatava malli faili nimi
+        $this->loadFile();      // laadime määratud nimega faili sisu
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // HTML malli faili nime ja õiguste kontroll ning sisu lugemine, kui tingimused on täidetud
 
     function loadFile(){
