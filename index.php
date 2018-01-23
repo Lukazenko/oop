@@ -13,27 +13,28 @@ require_once 'conf.php';
 
 // loome test objekti template klassist
 
-$mainTmbl = new template('main');
+$mainTmpl = new template('main');
 
 // määrame reaalväärtused malli elementidele
 
-$mainTmbl->set('lang','et');
-$mainTmbl->set('page_title','Lehe pealkiri');
-$mainTmbl->set('user','Kasutaja');
-$mainTmbl->set('title','Pealkiri');
-$mainTmbl->set('lang_bar','Keeleriba');
-$mainTmbl->set('menu','Lehe menüü');
-$mainTmbl->set('content','Lehe sisu');
+$mainTmpl->set('lang','et');
+$mainTmpl->set('page_title','Lehe pealkiri');
+$mainTmpl->set('user','Kasutaja');
+$mainTmpl->set('title','Pealkiri');
+$mainTmpl->set('lang_bar','Keeleriba');
+// katsetame menüü loomist
+require_once 'menu.php';
+$mainTmpl->set('content','Lehe sisu');
 
 
 
 // lisame objekti testvaade
 
 echo '<pre>';
-print_r($mainTmbl);
+print_r($mainTmpl);
 echo '</pre>';
 
-echo $mainTmbl->parse();
+echo $mainTmpl->parse();
 
 
 // katsetame menüü loomist

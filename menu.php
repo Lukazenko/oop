@@ -21,4 +21,17 @@ echo '<pre>';
 print_r($menuItemTmpl);
 echo '</pre>';
 
-echo $menuItemTmpl->parse();
+// täidame loodud elemndiga lehe menüü
+
+$menuItem = $menuItemTmpl->parse();
+$menuTmpl->set('menu_items', $menuItem);
+
+echo '<pre>';
+print_r($menuTmpl);
+echo '</pre>';
+
+
+// koostame valmis menüü vaate
+$menu = $menuTmpl->parse();
+// ja lisame antud vaate peamalli elemendile nimega {menu}
+$mainTmpl->set('menu', $menu);
