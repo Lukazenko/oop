@@ -17,7 +17,8 @@ define('CONTROL_DIR', 'controllers/');
 
 require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
+require_once MODEL_DIR.'linkobjekt.php';
 
 // loome objektid, mis oleks vaja pidevalt kasutada
 
-$http = new http();
+$http = new linkobjekt();

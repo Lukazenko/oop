@@ -26,17 +26,13 @@ $mainTmpl->set('lang_bar','Keeleriba');
 require_once 'menu.php';
 $mainTmpl->set('content','Lehe sisu');
 
-
-
-// lisame objekti testvaade
-
-echo '<pre>';
-print_r($mainTmpl);
-echo '</pre>';
-
 echo $mainTmpl->parse();
 
 
 // katsetame menüü loomist
 
 require_once 'menu.php';
+
+// testvaade konstandid
+
+echo HTTP_HOST.SCRIPT_NAME;
