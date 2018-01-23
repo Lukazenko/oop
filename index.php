@@ -13,17 +13,24 @@ require_once 'conf.php';
 
 // loome test objekti template klassist
 
-$testTabel = new template('test');
+$mainTmbl = new template('main');
 
 // määrame reaalväärtused malli elementidele
 
-$testTabel->set('esimene','1');
-$testTabel->set('teine','2');
+$mainTmbl->set('lang','et');
+$mainTmbl->set('page_title','Lehe pealkiri');
+$mainTmbl->set('user','Kasutaja');
+$mainTmbl->set('title','Pealkiri');
+$mainTmbl->set('lang_bar','Keeleriba');
+$mainTmbl->set('menu','Lehe menüü');
+$mainTmbl->set('content','Lehe sisu');
+
+
 
 // lisame objekti testvaade
 
 echo '<pre>';
-print_r($testTabel);
+print_r($mainTmbl);
 echo '</pre>';
 
-echo $testTabel->parse();
+echo $mainTmbl->parse();
