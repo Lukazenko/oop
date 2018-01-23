@@ -34,3 +34,8 @@ print_r($mainTmbl);
 echo '</pre>';
 
 echo $mainTmbl->parse();
+
+
+// katsetame menüü loomist
+
+require_once 'menu.php';

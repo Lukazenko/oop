@@ -70,7 +70,7 @@ class template
         // kui fail asub alamkataloogis views/alamkaust/failinimi.html
 
 
-        $file = VIEW_DIR.str_replace('.','/', $this->file)->file.'.html'; //abiasendus
+        $file = VIEW_DIR.str_replace('.','/', $this->file).'.html'; //abiasendus
         if(file_exists($file) and is_file($file) and is_readable($file)){
             $this->readFile($file);
         }
