@@ -35,4 +35,10 @@ require_once 'menu.php';
 
 // testvaade konstandid
 
-echo HTTP_HOST.SCRIPT_NAME;
+$link = '';
+
+$http->addToLink($link, 'control', 'login');
+$http->addToLink($link, 'username', 'test');
+
+
+
