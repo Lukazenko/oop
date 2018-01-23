@@ -17,18 +17,19 @@ $menuItemTmpl = new template('menu.menu_item');
 
 $menuItemTmpl->set('menu_item_name','esimene');
 
-echo '<pre>';
-print_r($menuItemTmpl);
-echo '</pre>';
+// täidame loodud elemndiga lehe menüü
+
+$menuItem = $menuItemTmpl->parse();
+$menuTmpl->add('menu_items', $menuItem);
+
+
+$menuItemTmpl->set('menu_item_name','teine');
 
 // täidame loodud elemndiga lehe menüü
 
 $menuItem = $menuItemTmpl->parse();
-$menuTmpl->set('menu_items', $menuItem);
+$menuTmpl->add('menu_items', $menuItem);
 
-echo '<pre>';
-print_r($menuTmpl);
-echo '</pre>';
 
 
 // koostame valmis menüü vaate
