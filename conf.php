@@ -13,6 +13,8 @@ define('VIEW_DIR', 'views/');
 define('CONTROL_DIR', 'controllers/');
 define('LIB_DIR', 'lib/');
 
+define('DEFAULT_CONTROL', 'default');
+
 
 // nõuame abifunktsiooni faili kasutamist
 
@@ -24,6 +26,8 @@ require_once LIB_DIR.'utils.php';
 require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobjekt.php';
+
+
 
 // loome objektid, mis oleks vaja pidevalt kasutada
 

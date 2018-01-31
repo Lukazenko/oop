@@ -11,9 +11,11 @@
 
 require_once 'conf.php';
 
+
 // loome test objekti template klassist
 
 $mainTmpl = new template('main');
+require_once 'control.php';
 
 // määrame reaalväärtused malli elementidele
 
@@ -24,7 +26,6 @@ $mainTmpl->set('title','Pealkiri');
 $mainTmpl->set('lang_bar','Keeleriba');
 // katsetame menüü loomist
 require_once 'menu.php';
-$mainTmpl->set('content','Lehe sisu');
 
 echo $mainTmpl->parse();
 

@@ -1,0 +1,10 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: asd
+ * Date: 1/31/2018
+ * Time: 9:47 AM
+ */
+
+
+$mainTmpl->set('content', 'Esimene leht');
