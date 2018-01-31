@@ -33,12 +33,13 @@ echo $mainTmpl->parse();
 
 require_once 'menu.php';
 
-// testvaade konstandid
+echo $http->get('control');
 
-$link = '';
 
-$http->addToLink($link, 'control', 'login');
-$http->addToLink($link, 'username', 'test');
+
+
+
+
 
 
 

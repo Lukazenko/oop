@@ -16,6 +16,10 @@ $menuItemTmpl = new template('menu.menu_item');
 // tegutseme ühe menüü elemendiga
 
 $menuItemTmpl->set('menu_item_name','esimene');
+// loome lingi
+$link = $http->getLink(array('control' => 'esimene'));
+$menuItemTmpl->set('link',$link);
+
 
 // täidame loodud elemndiga lehe menüü
 
@@ -24,6 +28,9 @@ $menuTmpl->add('menu_items', $menuItem);
 
 
 $menuItemTmpl->set('menu_item_name','teine');
+// loome lingi
+$link = $http->getLink(array('control' => 'teine'));
+$menuItemTmpl->set('link',$link);
 
 // täidame loodud elemndiga lehe menüü
 

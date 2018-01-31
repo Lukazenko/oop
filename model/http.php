@@ -41,4 +41,15 @@ class http
         }
     }
 
+    //loome funktsiooni, mis loeb lingist andmed
+
+    function get($name){
+        if(isset($this->vars[$name])){
+            return $this->vars[$name];
+
+        }else{
+            return false;
+        }
+    }
+
 }

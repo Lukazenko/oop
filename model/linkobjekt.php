@@ -20,7 +20,7 @@ class linkobjekt extends http
     {
         parent::__construct();
         $this->baseLink = $this->protocol.HTTP_HOST.SCRIPT_NAME;
-        echo $this->baseLink;
+        // echo $this->baseLink;
     }
 
     // loome paarid kujul nimi=väärtus
@@ -31,7 +31,24 @@ class linkobjekt extends http
             $link = $link.$this->delim;
         }
         $link = $link.fixUrl($name).$this->eq.fixUrl($value);
-        echo $link.'<br />';
+        // echo $link.'<br />';
+    }
+
+    function getLink($add = array()){
+        $link = ''; // lingi loomiseks vajalik muutuja
+        foreach ($add as $name => $value){
+            $this->addToLink($link, $name, $value);
+        }
+
+        if($link != ''){
+            $link = $this->baseLink.'?'.$link;
+        } else {
+            $link -$this->baseLink;
+        }
+
+        return $link;
     }
 
 }
+
+
