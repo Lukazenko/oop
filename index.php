@@ -34,7 +34,13 @@ echo $mainTmpl->parse();
 
 require_once 'menu.php';
 
-echo $http->get('control');
+
+// kontrollime andmebaasi objekti sisu et aru saada et on ühendus
+
+echo '<pre>';
+print_r($db);
+echo '</pre>';
+
 
 
 

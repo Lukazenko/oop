@@ -43,7 +43,7 @@ class linkobjekt extends http
         if($link != ''){
             $link = $this->baseLink.'?'.$link;
         } else {
-            $link -$this->baseLink;
+            $link = $this->baseLink;
         }
 
         return $link;

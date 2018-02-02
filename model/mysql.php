@@ -40,6 +40,19 @@ class mysql
         }
     }
 
+    // esitame päringu
+
+    function query($sql){
+        $result = mysqli_query($this->conn, $sql);
+        if($result == false){
+            echo 'Probleem päringuga<br />';
+            echo '<b>'.$sql.'</b>';
+            return false;
+        }
+
+        return $result;
+    }
+
 
 
 }
