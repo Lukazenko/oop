@@ -37,6 +37,8 @@ require_once 'menu.php';
 
 // kontrollime andmebaasi objekti sisu et aru saada et on ühendus
 
+$db->query('SELECT NOW()');
+
 echo '<pre>';
 print_r($db);
 echo '</pre>';
