@@ -37,7 +37,7 @@ require_once 'db_conf.php';
 
 // loome objektid, mis oleks vaja pidevalt kasutada
 
-$http = new linkobjekt();
+$http = new linkobjekt(); // kutsub linkobjekti
 
 
 // loome andmebaasi objekti

@@ -6,6 +6,9 @@
  * Time: 12:52 PM
  */
 
+// siin saab linki muuta
+
+
 class linkobjekt extends http
 {
     var $baseLink = false; // põhilink
@@ -19,7 +22,7 @@ class linkobjekt extends http
     public function __construct()
     {
         parent::__construct();
-        $this->baseLink = $this->protocol.HTTP_HOST.SCRIPT_NAME;
+        $this->baseLink = $this->protocol.HTTP_HOST.SCRIPT_NAME; // HTTP_HOST = ikt.khk.ee ja SCRIPT_NAME = /oop/index.php
         // echo $this->baseLink;
     }
 
