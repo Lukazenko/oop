@@ -52,4 +52,10 @@ class http
         }
     }
 
+    // loome funktsiooni, mis paneb veebi paarid paika kujul nimi=väärtus
+
+    function set($name, $value){
+        $this->vars[$name] = $value;
+    }
+
 }
