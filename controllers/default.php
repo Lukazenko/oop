@@ -15,7 +15,7 @@ $page_id = (int)$http->get('page_id');
 
 // lehe id järgi küsime sisu andmebaasist
 
-$sql = 'SELECT content FROM content'.
+$sql = 'SELECT * FROM content'.
     ' WHERE content_id='.fixDb($page_id);
 
 // küsime vajalikud andmed andmebaasist
@@ -26,13 +26,14 @@ $result = $db->getData($sql);
 if($result == false) {
     //siis pöördume avalehele first page
     $sql = 'SELECT * FROM content WHERE ' .
-        'is_first_page=' . fixDb(1);
+        'is_first_page='.fixDb(1);
     $result = $db->getData($sql);
 }
 
 if($result != false){
     //siis tulemus koosneb ainult ühest reast ja see ongi vastava lehe sisu
     $page = $result[0];
+    $http->set('page_id', $page['content_id']);
     $mainTmpl->set('content', $page['content']);
 }
 
