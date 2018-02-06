@@ -48,7 +48,7 @@ class http
             return $this->vars[$name];
 
         }else{
-            return false;''
+            return false;
         }
     }
 

@@ -8,3 +8,7 @@
 
 
 $mainTmpl->set('content', 'Lehe vaikimisi sisu');
+
+
+$page_id = $http->get('page_id');
+echo getty
