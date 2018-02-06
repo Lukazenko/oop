@@ -7,7 +7,7 @@
  */
 
 
-$mainTmpl->set('content', 'Lehe vaikimisi sisu');
+
 
 
 $page_id = (int)$http->get('page_id');
