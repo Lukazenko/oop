@@ -37,6 +37,31 @@ if($result != false){
     }
 }
 
+//lisame lisa elemendid, mis ei ole andmebaasist tulemas
+
+// katsetamiseks lisan uue konstandi, mis määrab kasutaja id - sellest lähtun, kas kasutajale on võimalik
+// antud menüü element näidata või mitte
+
+define('USER_ID', 0); // mitte sisselogitud kasutaja
+
+//näitame sisselogimist neile, kes ei ole sisselogitud
+
+if(USER_ID == ROLE_NONE){
+    $menuItem->set('menu_item_name', 'Logi sisse');
+    $link = $http->getLink(array('control'=>'Login'));
+    $menuItem->set('link', $link);
+    $menu->add('menu_items', $menuItem->parse());
+
+}
+
+
+
+
+
+
+
+
+
 $mainTmpl->add('menu', $menu->parse());
 
 

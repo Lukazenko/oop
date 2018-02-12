@@ -23,7 +23,7 @@ require_once LIB_DIR.'utils.php';
 
 
 
-// määrame erinevad rollid
+// määrame erinevad rollid sisselogimiseks
 
 define('ROLE_NONE', 0);
 define('ROLE_USER', 1);

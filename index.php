@@ -33,9 +33,7 @@ require_once 'menu.php';
 echo $mainTmpl->parse();
 
 
-// katsetame menüü loomist
 
-require_once 'menu.php';
 
 
 // kontrollime andmebaasi objekti sisu et aru saada et on ühendus
