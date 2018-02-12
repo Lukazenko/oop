@@ -48,7 +48,7 @@ define('USER_ID', 0); // mitte sisselogitud kasutaja
 
 if(USER_ID == ROLE_NONE){
     $menuItem->set('menu_item_name', 'Logi sisse');
-    $link = $http->getLink(array('control'=>'Login'));
+    $link = $http->getLink(array('control'=>'login'));
     $menuItem->set('link', $link);
     $menu->add('menu_items', $menuItem->parse());
 
