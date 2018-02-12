@@ -12,13 +12,22 @@ define('MODEL_DIR', 'model/');
 define('VIEW_DIR', 'views/');
 define('CONTROL_DIR', 'controllers/');
 define('LIB_DIR', 'lib/');
-
 define('DEFAULT_CONTROL', 'default');
+
+
 
 
 // nõuame abifunktsiooni faili kasutamist
 
 require_once LIB_DIR.'utils.php';
+
+
+
+// määrame erinevad rollid
+
+define('ROLE_NONE', 0);
+define('ROLE_USER', 1);
+define('ROLE_ADMIN', 2);
 
 
 // nõuame vajalike failide kasutamist
