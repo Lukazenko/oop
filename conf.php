@@ -36,6 +36,7 @@ require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobjekt.php';
 require_once MODEL_DIR.'mysql.php';
+require_once MODEL_DIR.'session.php';
 
 //kutsun konstandid kasutusele db_conf.php failist
 
@@ -52,3 +53,10 @@ $http = new linkobjekt(); // kutsub linkobjekti
 // loome andmebaasi objekti
 
 $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// sessioni objekt
+
+$sess = new session($http, $db);
+echo '<pre>';
+print_r($sess);
+echo '</pre>';
