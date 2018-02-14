@@ -23,9 +23,14 @@ $sql = 'SELECT * FROM user'.' WHERE username='.fixDb($username).
     ' AND password='.fixDb(md5($password));
 
 
-
+// küsime kasutaja andmed andmebaasist
 $result = $db->getData($sql);
 
-echo '<pre>';
-print_r($result);
-echo '</pre>';
+// kontrollime, kas andmed on olemas
+
+if($result != false){
+    //kasutajale tuleb avada töösessioon
+    echo 'Oled sisselogitud<br />';
+} else {
+    echo 'Suuname sisselogimisele<br />';
+}
