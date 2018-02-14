@@ -36,11 +36,6 @@ echo $mainTmpl->parse();
 
 
 
-// kontrollime andmebaasi objekti sisu et aru saada et on ühendus
-
-
-$result = $db->getData('SELECT NOW()');
-
 
 
 

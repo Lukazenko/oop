@@ -29,8 +29,20 @@ $result = $db->getData($sql);
 // kontrollime, kas andmed on olemas
 
 if($result != false){
+
+
+
     //kasutajale tuleb avada töösessioon
+
+
+
+
+
+
+
+
     echo 'Oled sisselogitud<br />';
 } else {
-    echo 'Suuname sisselogimisele<br />';
+    $link = $http->getLink(array('control' => 'login'));
+    $http->redirect($link);
 }
