@@ -14,8 +14,8 @@ class linkobjekt extends http
     var $baseLink = false; // põhilink
     var $protocol = 'http://';
     var $eq = '=';
-    var $delim = '&amp';
-    var $aie = array('lang_id');  // lingi kohustuslikud lisandid
+    var $delim = '&amp;';
+    var $aie = array('sid');  // lingi kohustuslikud lisandid
 
     /**
      * linkobjekt constructor.
