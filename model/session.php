@@ -65,7 +65,7 @@ class session
 
     function clearSession(){
         $sql = 'DELETE FROM session WHERE '.
-            time().' - UNIX_TIMESTAMP(changed) >'.
+            time().' - UNIX_TIMESTAMP(changed) > '.
             $this->timeout;
         $this->db->query($sql);
     }
