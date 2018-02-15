@@ -24,7 +24,7 @@ class session
     {
         $this->http = &$http;
         $this->db = &$db;
-        $this->sessionCreate();
+
     }
 
     // loome sessiooni
@@ -45,7 +45,7 @@ class session
             $sql = 'INSERT INTO session SET '.
                 'sid='.fixDb($sid).', '.
                 'user_id='.fixDb($user['user_id']).', '.
-                'user_data='.fixD(serialize($user)).', '.
+                'user_data='.fixDb(serialize($user)).', '.
                 'login_ip='.fixDb(REMOTE_ADDR).', '.
                 'created=NOW()';
 
@@ -58,6 +58,15 @@ class session
 
             $this->http->set('sid', $sid);
         }
+    }
+
+    // kustutame sessioni logid
+
+    function clearSession(){
+        $sql = 'DELETE FROM session WHERE '.
+            time().' - UNIX_TIMESTAMP(changed) >'.
+            $this->timeout;
+        $this->db->query($sql);
     }
 
 
