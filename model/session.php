@@ -24,7 +24,8 @@ class session
     {
         $this->http = &$http;
         $this->db = &$db;
-
+        //$this->sessionCreate();
+        //$this->clearSession(); et clearida
     }
 
     // loome sessiooni
