@@ -26,6 +26,8 @@ class session
         $this->db = &$db;
         //$this->sessionCreate();
         //$this->clearSession(); et clearida
+
+        $this->sid = $http->get('sid');
     }
 
     // loome sessiooni
@@ -61,7 +63,7 @@ class session
         }
     }
 
-    // kustutame sessioni logid
+    // kustutame sessioni logid, mis on pikemad kui 30 minutit
 
     function clearSession(){
         $sql = 'DELETE FROM session WHERE '.
